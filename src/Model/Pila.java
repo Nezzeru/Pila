@@ -8,14 +8,14 @@ import Controller.Pilable;
  
  */
 public class Pila implements Pilable {
-    private Nodo tope;                
+    private Nodo arriba;                
     private int numeroDatos;               
 
     /**
      * Construye una pila vacia.
      */
     public Pila() {
-	tope = null; 
+	arriba = null; 
 	numeroDatos = 0;
     }
 
@@ -23,15 +23,17 @@ public class Pila implements Pilable {
      * Verifica que la pila este vacia.
      * @return true si lo esta y falso en otro caso.
      */
+    @Override
     public boolean estaVacia (){ 
-	return tope == null; 
+	return arriba == null; 
     }
 
     /**
      * Vacia una pila.
      */
+    @Override
     public void vaciar() { 
-	tope = null; 
+	arriba = null; 
 	numeroDatos = 0;
     }
 
@@ -44,25 +46,27 @@ public class Pila implements Pilable {
     }
 
     /**
-     * Devuelve el elemento del tope de la pila (sin alterar esta)
+     * Devuelve el elemento del arriba de la pila (sin alterar esta)
      * o bien null si se encuentra vacia.
-     * @return Object -- objeto del tope de la pila
+     * @return Object -- objeto del arriba de la pila
      */
+    @Override
     public Object top() { 
-	return (estaVacia()) ? null : tope.obtenerElemento(); 
+	return (estaVacia()) ? null : arriba.obtenerElemento(); 
     }
 
     /**
-     * Extrae el elemento del tope de la pila. 
+     * Extrae el elemento del arriba de la pila. 
      * Devuelve null si la pila esta vacia.
-     * @return Object -- objeto del tope de la pila
+     * @return Object -- objeto del arriba de la pila
      */
+    @Override
     public Object pop() {
 	if (estaVacia())
 	    return null;
 
-	Object dato = tope.obtenerElemento();
-	tope = tope.obtenerSiguiente();
+	Object dato = arriba.obtenerElemento();
+	arriba = arriba.obtenerSiguiente();
 	numeroDatos --;
 	return dato;
     }
@@ -71,8 +75,9 @@ public class Pila implements Pilable {
      * Inserta un nuevo elemento en la pila.
      * @param x el elemento a insertar.
      */
+    @Override
     public void push(Object x) {
-	tope = new Nodo(x, tope);
+	arriba = new Nodo(x, arriba);
 	numeroDatos++;
     }
 
@@ -84,7 +89,7 @@ public class Pila implements Pilable {
     }
   
     private class MiIterador implements java.util.Iterator {
-	private Nodo posicion = tope;
+	private Nodo posicion = arriba;
 
 	public boolean hasNext() { return posicion != null;}
 
