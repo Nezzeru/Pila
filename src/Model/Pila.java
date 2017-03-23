@@ -1,3 +1,6 @@
+/**
+ * Modelo de la pila
+ */
 package Model;
 
 import Controller.Pilable;

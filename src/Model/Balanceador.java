@@ -1,23 +1,35 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Clase balanceador
  */
 package Model;
 
-import Model.Pila;
-
 public class Balanceador {
 
+    /**
+     * Obtiene el monton de la pila
+     *
+     * @return monton
+     */
     public Pila obtenerMonton() {
         return monton;
     }
 
+    /**
+     * Asigna un monton
+     *
+     * @param monton monton
+     *
+     */
     public void asignarMonton(Pila monton) {
         this.monton = monton;
     }
     private Pila monton;
 
+    /**
+     * Verifica que este balanceado
+     * @param usrInput lo que ingresa el usuarios
+     * @return mensaje
+     */
     public String estaBalanceado(String usrInput) {
         String mensaje = "";
 
@@ -52,7 +64,7 @@ public class Balanceador {
                     && usrInput.charAt(i) != ')' && usrInput.charAt(i) != '}' && usrInput.charAt(i) != ']' && usrInput.charAt(i) != '>') {
 
             }
-           
+
         }
 
         if (!usrInput.equalsIgnoreCase("") || !usrInput.equalsIgnoreCase("{") || !usrInput.equalsIgnoreCase("<") || !usrInput.equalsIgnoreCase(">") || !usrInput.equalsIgnoreCase(")") || !usrInput.equalsIgnoreCase("(") || !usrInput.equalsIgnoreCase("[") || !usrInput.equalsIgnoreCase("]")) {

@@ -1,3 +1,6 @@
+/**
+ * Modelo del nodo
+ */
 package Model;
 
 /**
