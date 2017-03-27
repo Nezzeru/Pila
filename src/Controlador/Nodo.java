@@ -1,7 +1,7 @@
 /**
  * Modelo del nodo
  */
-package Model;
+package Controlador;
 
 /**
  * Nodo de la pila

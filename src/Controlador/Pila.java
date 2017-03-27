@@ -1,9 +1,9 @@
 /**
  * Modelo de la pila
  */
-package Model;
+package Controlador;
 
-import Controller.Pilable;
+import Modelo.Pilable;
 
 /**
  * Implementa Pilable usando nodos

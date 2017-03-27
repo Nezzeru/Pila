@@ -1,7 +1,7 @@
 
 
  
-package Controller;
+package Modelo;
 
 /**
  *  Clase base llamada pilable

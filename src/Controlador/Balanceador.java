@@ -2,7 +2,7 @@
  * Clase balanceador
  * @author Teodora
  */
-package Model;
+package Controlador;
 /**
  * Balancea entre textos
  * @author teodora <lcarcamo1526@universidadean.edu.co>
