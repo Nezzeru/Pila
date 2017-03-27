@@ -1,10 +1,10 @@
-/*
- *Clase pilable
- */
+
+
+ 
 package Controller;
 
 /**
- *
+ *  Clase base llamada pilable
  * @author teodora
  */
 public interface Pilable {

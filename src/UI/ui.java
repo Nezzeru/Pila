@@ -8,7 +8,7 @@ package UI;
 import Model.Balanceador;
 
 /**
- *
+ * Interfaz grafica del proyecto
  * @author SALAAL
  */
 public class ui extends javax.swing.JFrame {
@@ -91,7 +91,7 @@ public class ui extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void checkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkActionPerformed
-     usrInput.setText(equivalente.estaBalanceado(usrInput.getText()));
+     usrInput.setText(equivalente.balancear(usrInput.getText()));
     }//GEN-LAST:event_checkActionPerformed
 
     /**

@@ -5,8 +5,7 @@ package Model;
 
 /**
  * Nodo de la pila
- *
- * @author teodora
+ * @author teodora <lcarcamo1526@universidadean.edu.co>
  *
  */
 public class Nodo {
